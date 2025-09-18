@@ -1,0 +1,33 @@
+{
+  "name": "cloc-languages",
+  "version": "1.0.0",
+  "description": "A list of languages from https://github.com/AlDanial/cloc",
+  "main": "lib/index.js",
+  "type": "module",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=12.20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElJijuna/cloc-languages.git"
+  },
+  "keywords": [
+    "cloc-laguages",
+    "cloc",
+    "language",
+    "keyword"
+  ],
+  "author": "Ivan <pilmee@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ElJijuna/cloc-languages/issues"
+  },
+  "homepage": "https://github.com/ElJijuna/cloc-languages"
+}
