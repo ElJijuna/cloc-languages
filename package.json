@@ -3,6 +3,34 @@
   "version": "1.0.0",
   "description": "A list of languages from https://github.com/AlDanial/cloc",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    },
+    "./languages-color": {
+      "import": "./lib/languages-color.js",
+      "require": "./lib/languages-color.js",
+      "types": "./lib/languages-color.d.ts"
+    },
+    "./languages-category": {
+      "import": "./lib/languages-category.js",
+      "require": "./lib/languages-category.js",
+      "types": "./lib/languages-category.d.ts"
+    },
+    "./languages-description": {
+      "import": "./lib/languages-description.js",
+      "require": "./lib/languages-description.js",
+      "types": "./lib/languages-description.d.ts"
+    },
+    "./languages": {
+      "import": "./lib/languages.js",
+      "require": "./lib/languages.js",
+      "types": "./lib/languages.d.ts"
+    }
+  },
   "type": "module",
   "files": [
     "lib"
@@ -11,6 +39,7 @@
     "node": ">=12.20"
   },
   "scripts": {
+    "build": "tsc",
     "test": "node --test",
     "test:coverage": "node --test --experimental-test-coverage"
   },
@@ -29,5 +58,8 @@
   "bugs": {
     "url": "https://github.com/ElJijuna/cloc-languages/issues"
   },
-  "homepage": "https://github.com/ElJijuna/cloc-languages"
+  "homepage": "https://github.com/ElJijuna/cloc-languages",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
 }
