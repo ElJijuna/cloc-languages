@@ -11,37 +11,49 @@ Una lista de lenguajes y sus extensiones basada en [cloc](https://github.com/AlD
 npm install cloc-languages
 ```
 
-## Uso
+## Uso básico
 
 ```js
-import languages from 'cloc-languages';
+import { languagesDescription } from 'cloc-languages';
 
-console.log(languages);
+console.log(languagesDescription);
 // { ABAP: '(abap)', ActionScript: '(as)', ... }
 ```
 
 ### Ejemplo: listar todos los lenguajes y sus extensiones
 
 ```js
-import languages from 'cloc-languages';
+import { languagesDescription } from 'cloc-languages';
 
-for (const [name, extensions] of Object.entries(languages)) {
+for (const [name, extensions] of Object.entries(languagesDescription)) {
   console.log(`${name}: ${extensions}`);
 }
 ```
 
+## Múltiples entrypoints
+
+Puedes importar solo lo que necesitas:
+
+```js
+import { languagesColor } from 'cloc-languages/languages-color';
+import { languagesCategory } from 'cloc-languages/languages-category';
+import { languagesDescription } from 'cloc-languages/languages-description';
+```
+
 ## API
 
-- El paquete exporta un objeto por defecto.
-- Cada clave es el nombre de un lenguaje.
-- Cada valor es un string con las extensiones asociadas, entre paréntesis y separadas por comas.
+- `languagesDescription`: Objeto con los lenguajes y sus extensiones.
+- `languagesColor`: Objeto con los lenguajes y su color asociado.
+- `languagesCategory`: Objeto con los lenguajes y su categoría (frontend, backend, scripting, etc).
+- `languages`: Tipos y utilidades relacionadas.
 
 ## ¿Qué es esto?
 
-Este paquete exporta un objeto con los lenguajes reconocidos por [cloc](https://github.com/AlDanial/cloc) y sus extensiones asociadas.
+Este paquete exporta objetos y tipos con los lenguajes reconocidos por [cloc](https://github.com/AlDanial/cloc), sus extensiones, colores y categorías.
 
 ## Scripts
 
+- `npm run build`: Compila TypeScript a la carpeta `lib`.
 - `npm test`: Ejecuta los tests.
 - `npm run test:coverage`: Ejecuta los tests con cobertura.
 
