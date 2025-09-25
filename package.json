@@ -1,6 +1,6 @@
 {
   "name": "cloc-languages",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A list of languages from https://github.com/AlDanial/cloc",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
