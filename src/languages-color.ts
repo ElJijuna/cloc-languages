@@ -356,6 +356,9 @@ export const languagesColor: LanguagesRecord = {
   Yang: '#e17055',
   Zig: '#ec915c',
   zsh: '#00b894',
+  xBase: '#7d7d7d',
+  "xBase Header": '#bdb76b',
+  XHTML: '#e44d26',
+  XMI: '#4682b4',
+  XSD: '#8b008b',
 };
-
-export default languagesColor;

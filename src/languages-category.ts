@@ -1,4 +1,4 @@
-import { LanguagesRecord } from "./languages";
+import { LanguagesRecord } from './languages';
 
 export const languagesCategory: LanguagesRecord = {
   ABAP: 'backend',
@@ -340,6 +340,25 @@ export const languagesCategory: LanguagesRecord = {
   'Windows Message File': 'data',
   'Windows Module Definition': 'tooling',
   'Windows Resource File': 'tooling',
+  'WiX include': 'tooling',
+  'WiX source': 'tooling',
+  'WiX string localization': 'tooling',
+  WXML: 'frontend',
+  xBase: 'backend',
+  XMI: 'data',
+  XQuery: 'backend',
+  XSD: 'data',
+  XSLT: 'tooling',
+  Xtend: 'backend',
+  YAML: 'data',
+  Zig: 'backend',
+  zsh: 'scripting',
+  WXSS: 'frontend',
+  'X++': 'backend',
+  XAML: 'frontend',
+  XML: 'data',
+  XHTML: 'frontend',
+  'xBase Header': 'backend',
+  yacc: 'tooling',
+  Yang: 'data',
 };
-
-export default languagesCategory;

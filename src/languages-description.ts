@@ -1,6 +1,6 @@
 import { LanguagesRecord } from "./languages";
 
-const languagesDescription: LanguagesRecord = {
+export const languagesDescription: LanguagesRecord = {
   ABAP: '(abap)',
   ActionScript: '(as)',
   Ada: '(ada, adb, ads, pad)',
@@ -363,5 +363,3 @@ const languagesDescription: LanguagesRecord = {
   Zig: '(zig)',
   zsh: '(zsh)',
 };
-
-export default languagesDescription;
