@@ -45,7 +45,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "node --test",
+    "test": "node --test --import=tsx",
     "test:coverage": "node --test --experimental-test-coverage"
   },
   "repository": {
@@ -65,6 +65,7 @@
   },
   "homepage": "https://github.com/ElJijuna/cloc-languages",
   "devDependencies": {
+    "@types/node": "^24.5.2",
     "typescript": "^5.9.2"
   }
 }
