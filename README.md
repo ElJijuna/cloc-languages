@@ -1,7 +1,14 @@
 # cloc-languages
 
-[![npm version](https://img.shields.io/npm/v/cloc-languages.svg)](https://www.npmjs.com/package/cloc-languages)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/cloc-languages.svg)](https://www.npmjs.com/package/cloc-languages)
+![npm downloads](https://img.shields.io/npm/dw/cloc-languages)
+![npm downloads](https://img.shields.io/npm/dm/cloc-languages)
+![npm downloads](https://img.shields.io/npm/dt/cloc-languages)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/cloc-languages)
+![npm](https://img.shields.io/npm/dt/cloc-languages)
+
+
 
 Una lista de lenguajes y sus extensiones basada en [cloc](https://github.com/AlDanial/cloc).
 
