@@ -45,8 +45,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "node --test --import=tsx",
-    "test:coverage": "node --test --experimental-test-coverage",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "semantic-release": "semantic-release"
   },
   "repository": {
@@ -66,8 +66,10 @@
   },
   "homepage": "https://github.com/ElJijuna/cloc-languages",
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.5.2",
     "semantic-release": "^24.2.9",
+    "ts-jest": "^29.4.4",
     "typescript": "^5.9.2"
   }
 }
