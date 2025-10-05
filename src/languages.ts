@@ -1,363 +1,370 @@
+/**
+ * Representa un registro de lenguajes de programación.
+ */
 export type Languages =
-  | "ABAP"
-  | "ActionScript"
-  | "Ada"
-  | "ADSO/IDSM"
-  | "Agda"
-  | "AMPLE"
-  | "AnsProlog"
-  | "Ant"
-  | "ANTLR Grammar"
-  | "Apex Class"
-  | "Apex Trigger"
-  | "APL"
-  | "AppleScript"
-  | "Arduino Sketch"
-  | "ArkTs"
-  | "Arturo"
-  | "AsciiDoc"
-  | "ASP"
-  | "ASP.NET"
-  | "AspectJ"
-  | "Assembly"
-  | "Astro"
-  | "Asymptote"
-  | "AutoHotkey"
-  | "awk"
-  | "Bazel"
-  | "BitBake"
-  | "BizTalk Orchestration"
-  | "BizTalk Pipeline"
-  | "Blade"
-  | "Bourne Again Shell"
-  | "Bourne Shell"
-  | "BrightScript"
-  | "builder"
-  | "C"
-  | "C Shell"
-  | "C#"
-  | "C# Designer"
-  | "C++"
-  | "C/C++ Header"
-  | "Cairo"
-  | "Cake Build Script"
-  | "Carbon"
-  | "CCS"
-  | "Chapel"
-  | "Circom"
-  | "Clean"
-  | "Clojure"
-  | "ClojureC"
-  | "ClojureScript"
-  | "CMake"
-  | "COBOL"
-  | "CoCoA 5"
-  | "CoffeeScript"
-  | "ColdFusion"
-  | "ColdFusion CFScript"
-  | "Constraint Grammar"
-  | "Containerfile"
-  | "Coq"
-  | "Crystal"
-  | "CSON"
-  | "CSS"
-  | "CSV"
-  | "Cucumber"
-  | "CUDA"
-  | "Cython"
-  | "D"
-  | "Dafny"
-  | "DAL"
-  | "Dart"
-  | "Delphi Form"
-  | "DenizenScript"
-  | "Derw"
-  | "dhall"
-  | "DIET"
-  | "diff"
-  | "DITA"
-  | "Dockerfile"
-  | "DOORS Extension Language"
-  | "DOS Batch"
-  | "Drools"
-  | "DTD"
-  | "dtrace"
-  | "ECPP"
-  | "EEx"
-  | "EJS"
-  | "Elixir"
-  | "Elm"
-  | "Embedded Crystal"
-  | "ERB"
-  | "Erlang"
-  | "Expect"
-  | "F#"
-  | "F# Script"
-  | "Fennel"
-  | "Finite State Language"
-  | "Fish Shell"
-  | "Flatbuffers"
-  | "Focus"
-  | "Forth"
-  | "Fortran 77"
-  | "Fortran 90"
-  | "Fortran 95"
-  | "Freemarker Template"
-  | "Futhark"
-  | "FXML"
-  | "GDScript"
-  | "Gencat NLS"
-  | "Glade"
-  | "Gleam"
-  | "Glimmer JavaScript"
-  | "Glimmer TypeScript"
-  | "GLSL"
-  | "Go"
-  | "Godot Resource"
-  | "Godot Scene"
-  | "Godot Shaders"
-  | "Gradle"
-  | "Grails"
-  | "GraphQL"
-  | "Groovy"
-  | "Haml"
-  | "Handlebars"
-  | "Harbour"
-  | "Hare"
-  | "Haskell"
-  | "Haxe"
-  | "HCL"
-  | "HLSL"
-  | "HolyC"
-  | "Hoon"
-  | "HTML"
-  | "HTML EEx"
-  | "IDL"
-  | "Idris"
-  | "Igor Pro"
-  | "Imba"
-  | "INI"
-  | "InstallShield"
-  | "IPL"
-  | "Jai"
-  | "Janet"
-  | "Java"
-  | "JavaScript"
-  | "JavaServer Faces"
-  | "JCL"
-  | "Jinja Template"
-  | "JSON"
-  | "JSON5"
-  | "JSP"
-  | "JSX"
-  | "Julia"
-  | "Juniper Junos"
-  | "Jupyter Notebook"
-  | "Kermit"
-  | "Korn Shell"
-  | "Kotlin"
-  | "kvlang"
-  | "Lean"
-  | "Lem"
-  | "LESS"
-  | "lex"
-  | "LFE"
-  | "Linker Script"
-  | "liquid"
-  | "Lisp"
-  | "Literate Idris"
-  | "LiveLink OScript"
-  | "LLVM IR"
-  | "Logos"
-  | "Logtalk"
-  | "Lua"
-  | "Luau"
-  | "m4"
-  | "make"
-  | "Mako"
-  | "Markdown"
-  | "Mathematica"
-  | "MATLAB"
-  | "Maven"
-  | "Meson"
-  | "Metal"
-  | "Modelica"
-  | "Modula3"
-  | "Mojo"
-  | "Mojom"
-  | "MoonBit"
-  | "MSBuild script"
-  | "MUMPS"
-  | "Mustache"
-  | "MXML"
-  | "NAnt script"
-  | "NASTRAN DMAP"
-  | "Nemerle"
-  | "NetLogo"
-  | "Nickel"
-  | "Nim"
-  | "Nix"
-  | "Nunjucks"
-  | "Objective-C"
-  | "Objective-C++"
-  | "OCaml"
-  | "Odin"
-  | "OpenCL"
-  | "OpenSCAD"
-  | "Oracle Forms"
-  | "Oracle PL/SQL"
-  | "Oracle Reports"
-  | "P4"
-  | "Pascal"
-  | "Pascal/Pawn"
-  | "Pascal/Puppet"
-  | "Patran Command Language"
-  | "Pawn"
-  | "PEG"
-  | "peg.js"
-  | "peggy"
-  | "Perl"
-  | "Pest"
-  | "PHP"
-  | "PHP/Pascal/Fortran/Pawn/Bitbake"
-  | "Pig Latin"
-  | "PL/I"
-  | "PL/M"
-  | "PlantUML"
-  | "PO File"
-  | "Pony"
-  | "PowerBuilder"
-  | "PowerShell"
-  | "Prisma Schema"
-  | "Processing"
-  | "ProGuard"
-  | "Prolog"
-  | "Properties"
-  | "Protocol Buffers"
-  | "PRQL"
-  | "Pug"
-  | "PureScript"
-  | "Python"
-  | "QML"
-  | "Qt"
-  | "Qt Linguist"
-  | "Qt Project"
-  | "R"
-  | "Racket"
-  | "Raku"
-  | "Raku/Prolog"
-  | "RAML"
-  | "RapydScript"
-  | "Razor"
-  | "ReasonML"
-  | "Rego"
-  | "ReScript"
-  | "reStructuredText"
-  | "Rexx"
-  | "Ring"
-  | "Rmd"
-  | "RobotFramework"
-  | "Ruby"
-  | "Ruby HTML"
-  | "Rust"
-  | "SaltStack"
-  | "SAS"
-  | "Sass"
-  | "Scala"
-  | "Scheme"
-  | "SCSS"
-  | "sed"
-  | "SKILL"
-  | "SKILL++"
-  | "Slice"
-  | "Slim"
-  | "Slint"
-  | "Smalltalk"
-  | "Smarty"
-  | "Snakemake"
-  | "Softbridge Basic"
-  | "Solidity"
-  | "SparForte"
-  | "Specman e"
-  | "SQL"
-  | "SQL Data"
-  | "SQL Stored Procedure"
-  | "Squirrel"
-  | "Standard ML"
-  | "Starlark"
-  | "Stata"
-  | "Stylus"
-  | "SugarSS"
-  | "Svelte"
-  | "SVG"
-  | "Swift"
-  | "SWIG"
-  | "TableGen"
-  | "Tcl/Tk"
-  | "TEAL"
-  | "Teamcenter met"
-  | "Teamcenter mth"
-  | "Templ"
-  | "TeX"
-  | "Text"
-  | "Unknown/BitBake"
-  | "Thrift"
-  | "TITAN Project File Information"
-  | "Titanium Style Sheet"
-  | "TLA+"
-  | "TNSDL"
-  | "TOML"
-  | "tspeg"
-  | "TTCN"
-  | "Twig"
-  | "TypeScript"
-  | "Typst"
-  | "Umka"
-  | "Unity-Prefab"
-  | "USS"
-  | "UXML"
-  | "Vala"
-  | "Vala Header"
-  | "VB for Applications"
-  | "Velocity Template Language"
-  | "Verilog-SystemVerilog"
-  | "VHDL"
-  | "vim script"
-  | "Visual Basic"
-  | "Visual Basic .NET"
-  | "Visual Basic Script"
-  | "Visual Fox Pro"
-  | "Visual Studio Solution"
-  | "Visualforce Component"
-  | "Visualforce Page"
-  | "Vuejs Component"
-  | "Vyper"
-  | "Web Services Description"
-  | "WebAssembly"
-  | "WGSL"
-  | "Windows Message File"
-  | "Windows Module Definition"
-  | "Windows Resource File"
-  | "WiX include"
-  | "WiX source"
-  | "WiX string localization"
-  | "WXML"
-  | "WXSS"
-  | "X++"
-  | "XAML"
-  | "xBase"
-  | "xBase Header"
-  | "XHTML"
-  | "XMI"
-  | "XML"
-  | "XQuery"
-  | "XSD"
-  | "XSLT"
-  | "Xtend"
-  | "yacc"
-  | "YAML"
-  | "Yang"
-  | "Zig"
-  | "zsh";
+  | 'ABAP'
+  | 'ActionScript'
+  | 'Ada'
+  | 'ADSO/IDSM'
+  | 'Agda'
+  | 'AMPLE'
+  | 'AnsProlog'
+  | 'Ant'
+  | 'ANTLR Grammar'
+  | 'Apex Class'
+  | 'Apex Trigger'
+  | 'APL'
+  | 'AppleScript'
+  | 'Arduino Sketch'
+  | 'ArkTs'
+  | 'Arturo'
+  | 'AsciiDoc'
+  | 'ASP'
+  | 'ASP.NET'
+  | 'AspectJ'
+  | 'Assembly'
+  | 'Astro'
+  | 'Asymptote'
+  | 'AutoHotkey'
+  | 'awk'
+  | 'Bazel'
+  | 'BitBake'
+  | 'BizTalk Orchestration'
+  | 'BizTalk Pipeline'
+  | 'Blade'
+  | 'Bourne Again Shell'
+  | 'Bourne Shell'
+  | 'BrightScript'
+  | 'builder'
+  | 'C'
+  | 'C Shell'
+  | 'C#'
+  | 'C# Designer'
+  | 'C++'
+  | 'C/C++ Header'
+  | 'Cairo'
+  | 'Cake Build Script'
+  | 'Carbon'
+  | 'CCS'
+  | 'Chapel'
+  | 'Circom'
+  | 'Clean'
+  | 'Clojure'
+  | 'ClojureC'
+  | 'ClojureScript'
+  | 'CMake'
+  | 'COBOL'
+  | 'CoCoA 5'
+  | 'CoffeeScript'
+  | 'ColdFusion'
+  | 'ColdFusion CFScript'
+  | 'Constraint Grammar'
+  | 'Containerfile'
+  | 'Coq'
+  | 'Crystal'
+  | 'CSON'
+  | 'CSS'
+  | 'CSV'
+  | 'Cucumber'
+  | 'CUDA'
+  | 'Cython'
+  | 'D'
+  | 'Dafny'
+  | 'DAL'
+  | 'Dart'
+  | 'Delphi Form'
+  | 'DenizenScript'
+  | 'Derw'
+  | 'dhall'
+  | 'DIET'
+  | 'diff'
+  | 'DITA'
+  | 'Dockerfile'
+  | 'DOORS Extension Language'
+  | 'DOS Batch'
+  | 'Drools'
+  | 'DTD'
+  | 'dtrace'
+  | 'ECPP'
+  | 'EEx'
+  | 'EJS'
+  | 'Elixir'
+  | 'Elm'
+  | 'Embedded Crystal'
+  | 'ERB'
+  | 'Erlang'
+  | 'Expect'
+  | 'F#'
+  | 'F# Script'
+  | 'Fennel'
+  | 'Finite State Language'
+  | 'Fish Shell'
+  | 'Flatbuffers'
+  | 'Focus'
+  | 'Forth'
+  | 'Fortran 77'
+  | 'Fortran 90'
+  | 'Fortran 95'
+  | 'Freemarker Template'
+  | 'Futhark'
+  | 'FXML'
+  | 'GDScript'
+  | 'Gencat NLS'
+  | 'Glade'
+  | 'Gleam'
+  | 'Glimmer JavaScript'
+  | 'Glimmer TypeScript'
+  | 'GLSL'
+  | 'Go'
+  | 'Godot Resource'
+  | 'Godot Scene'
+  | 'Godot Shaders'
+  | 'Gradle'
+  | 'Grails'
+  | 'GraphQL'
+  | 'Groovy'
+  | 'Haml'
+  | 'Handlebars'
+  | 'Harbour'
+  | 'Hare'
+  | 'Haskell'
+  | 'Haxe'
+  | 'HCL'
+  | 'HLSL'
+  | 'HolyC'
+  | 'Hoon'
+  | 'HTML'
+  | 'HTML EEx'
+  | 'IDL'
+  | 'Idris'
+  | 'Igor Pro'
+  | 'Imba'
+  | 'INI'
+  | 'InstallShield'
+  | 'IPL'
+  | 'Jai'
+  | 'Janet'
+  | 'Java'
+  | 'JavaScript'
+  | 'JavaServer Faces'
+  | 'JCL'
+  | 'Jinja Template'
+  | 'JSON'
+  | 'JSON5'
+  | 'JSP'
+  | 'JSX'
+  | 'Julia'
+  | 'Juniper Junos'
+  | 'Jupyter Notebook'
+  | 'Kermit'
+  | 'Korn Shell'
+  | 'Kotlin'
+  | 'kvlang'
+  | 'Lean'
+  | 'Lem'
+  | 'LESS'
+  | 'lex'
+  | 'LFE'
+  | 'Linker Script'
+  | 'liquid'
+  | 'Lisp'
+  | 'Literate Idris'
+  | 'LiveLink OScript'
+  | 'LLVM IR'
+  | 'Logos'
+  | 'Logtalk'
+  | 'Lua'
+  | 'Luau'
+  | 'm4'
+  | 'make'
+  | 'Mako'
+  | 'Markdown'
+  | 'Mathematica'
+  | 'MATLAB'
+  | 'Maven'
+  | 'Meson'
+  | 'Metal'
+  | 'Modelica'
+  | 'Modula3'
+  | 'Mojo'
+  | 'Mojom'
+  | 'MoonBit'
+  | 'MSBuild script'
+  | 'MUMPS'
+  | 'Mustache'
+  | 'MXML'
+  | 'NAnt script'
+  | 'NASTRAN DMAP'
+  | 'Nemerle'
+  | 'NetLogo'
+  | 'Nickel'
+  | 'Nim'
+  | 'Nix'
+  | 'Nunjucks'
+  | 'Objective-C'
+  | 'Objective-C++'
+  | 'OCaml'
+  | 'Odin'
+  | 'OpenCL'
+  | 'OpenSCAD'
+  | 'Oracle Forms'
+  | 'Oracle PL/SQL'
+  | 'Oracle Reports'
+  | 'P4'
+  | 'Pascal'
+  | 'Pascal/Pawn'
+  | 'Pascal/Puppet'
+  | 'Patran Command Language'
+  | 'Pawn'
+  | 'PEG'
+  | 'peg.js'
+  | 'peggy'
+  | 'Perl'
+  | 'Pest'
+  | 'PHP'
+  | 'PHP/Pascal/Fortran/Pawn/Bitbake'
+  | 'Pig Latin'
+  | 'PL/I'
+  | 'PL/M'
+  | 'PlantUML'
+  | 'PO File'
+  | 'Pony'
+  | 'PowerBuilder'
+  | 'PowerShell'
+  | 'Prisma Schema'
+  | 'Processing'
+  | 'ProGuard'
+  | 'Prolog'
+  | 'Properties'
+  | 'Protocol Buffers'
+  | 'PRQL'
+  | 'Pug'
+  | 'PureScript'
+  | 'Python'
+  | 'QML'
+  | 'Qt'
+  | 'Qt Linguist'
+  | 'Qt Project'
+  | 'R'
+  | 'Racket'
+  | 'Raku'
+  | 'Raku/Prolog'
+  | 'RAML'
+  | 'RapydScript'
+  | 'Razor'
+  | 'ReasonML'
+  | 'Rego'
+  | 'ReScript'
+  | 'reStructuredText'
+  | 'Rexx'
+  | 'Ring'
+  | 'Rmd'
+  | 'RobotFramework'
+  | 'Ruby'
+  | 'Ruby HTML'
+  | 'Rust'
+  | 'SaltStack'
+  | 'SAS'
+  | 'Sass'
+  | 'Scala'
+  | 'Scheme'
+  | 'SCSS'
+  | 'sed'
+  | 'SKILL'
+  | 'SKILL++'
+  | 'Slice'
+  | 'Slim'
+  | 'Slint'
+  | 'Smalltalk'
+  | 'Smarty'
+  | 'Snakemake'
+  | 'Softbridge Basic'
+  | 'Solidity'
+  | 'SparForte'
+  | 'Specman e'
+  | 'SQL'
+  | 'SQL Data'
+  | 'SQL Stored Procedure'
+  | 'Squirrel'
+  | 'Standard ML'
+  | 'Starlark'
+  | 'Stata'
+  | 'Stylus'
+  | 'SugarSS'
+  | 'Svelte'
+  | 'SVG'
+  | 'Swift'
+  | 'SWIG'
+  | 'TableGen'
+  | 'Tcl/Tk'
+  | 'TEAL'
+  | 'Teamcenter met'
+  | 'Teamcenter mth'
+  | 'Templ'
+  | 'TeX'
+  | 'Text'
+  | 'Unknown/BitBake'
+  | 'Thrift'
+  | 'TITAN Project File Information'
+  | 'Titanium Style Sheet'
+  | 'TLA+'
+  | 'TNSDL'
+  | 'TOML'
+  | 'tspeg'
+  | 'TTCN'
+  | 'Twig'
+  | 'TypeScript'
+  | 'Typst'
+  | 'Umka'
+  | 'Unity-Prefab'
+  | 'USS'
+  | 'UXML'
+  | 'Vala'
+  | 'Vala Header'
+  | 'VB for Applications'
+  | 'Velocity Template Language'
+  | 'Verilog-SystemVerilog'
+  | 'VHDL'
+  | 'vim script'
+  | 'Visual Basic'
+  | 'Visual Basic .NET'
+  | 'Visual Basic Script'
+  | 'Visual Fox Pro'
+  | 'Visual Studio Solution'
+  | 'Visualforce Component'
+  | 'Visualforce Page'
+  | 'Vuejs Component'
+  | 'Vyper'
+  | 'Web Services Description'
+  | 'WebAssembly'
+  | 'WGSL'
+  | 'Windows Message File'
+  | 'Windows Module Definition'
+  | 'Windows Resource File'
+  | 'WiX include'
+  | 'WiX source'
+  | 'WiX string localization'
+  | 'WXML'
+  | 'WXSS'
+  | 'X++'
+  | 'XAML'
+  | 'xBase'
+  | 'xBase Header'
+  | 'XHTML'
+  | 'XMI'
+  | 'XML'
+  | 'XQuery'
+  | 'XSD'
+  | 'XSLT'
+  | 'Xtend'
+  | 'yacc'
+  | 'YAML'
+  | 'Yang'
+  | 'Zig'
+  | 'zsh';
 
+/**
+* Representa un registro de lenguajes de programación y sus colores asociados.
+* Cada clave es el nombre del lenguaje y el valor es un color en formato hexadecimal.
+*/
 export type LanguagesRecord = Record<Languages, string>;

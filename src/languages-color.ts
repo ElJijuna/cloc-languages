@@ -1,5 +1,27 @@
-import { LanguagesRecord } from "./languages";
+import { LanguagesRecord } from './languages';
 
+/**
+ * Un mapa que asocia nombres de lenguajes de programación y tecnologías
+ * con sus respectivos colores representativos en formato hexadecimal.
+ *
+ * Este objeto puede ser utilizado para propósitos visuales como:
+ * - Mostrar colores distintivos en interfaces de usuario.
+ * - Generar leyendas o etiquetas codificadas por color.
+ * - Identificar rápidamente lenguajes por su color en gráficos o dashboards.
+ *
+ * Las claves del objeto representan el nombre del lenguaje o tecnología,
+ * mientras que los valores son cadenas hexadecimales que indican el color.
+ *
+ * @example
+ * ```ts
+ * const color = languagesColor['TypeScript']; // '#2b7489'
+ * ```
+ *
+ * @remarks
+ * Este objeto implementa la interfaz `LanguagesRecord`, la cual define
+ * un conjunto de pares clave-valor donde la clave es una cadena y el valor
+ * también es una cadena que representa un color hexadecimal.
+ */
 export const languagesColor: LanguagesRecord = {
   ABAP: '#E8274B',
   ActionScript: '#882B0F',
@@ -357,7 +379,7 @@ export const languagesColor: LanguagesRecord = {
   Zig: '#ec915c',
   zsh: '#00b894',
   xBase: '#7d7d7d',
-  "xBase Header": '#bdb76b',
+  'xBase Header': '#bdb76b',
   XHTML: '#e44d26',
   XMI: '#4682b4',
   XSD: '#8b008b',

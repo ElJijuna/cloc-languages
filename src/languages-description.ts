@@ -1,5 +1,29 @@
-import { LanguagesRecord } from "./languages";
+import { LanguagesRecord } from './languages';
 
+/**
+ * Un mapa que relaciona lenguajes de programación, tecnologías y formatos
+ * con sus extensiones de archivo típicas o convenciones de nombres.
+ *
+ * Las claves representan el nombre del lenguaje o tecnología, y los valores
+ * son cadenas que contienen una lista de extensiones de archivo entre paréntesis.
+ * Estas extensiones indican los tipos de archivos comúnmente asociados con cada lenguaje.
+ *
+ * Este objeto es útil para:
+ * - Identificar el tipo de lenguaje a partir de la extensión de un archivo.
+ * - Mostrar información contextual en editores o herramientas de desarrollo.
+ * - Generar filtros o agrupaciones por tipo de archivo.
+ *
+ * @example
+ * ```ts
+ * const extensions = languagesDescription['Python']; 
+ * // '(buck, build.bazel, gclient, gyp, gypi, lmi, py, py3, pyde, pyi, pyp, pyt, pyw, sconscript, sconstruct, snakefile, tac, workspace, wscript, wsgi, xpy)'
+ * ```
+ *
+ * @remarks
+ * Este objeto implementa la interfaz `LanguagesRecord`, donde cada clave es
+ * un nombre de lenguaje y el valor es una cadena que representa sus extensiones
+ * de archivo más comunes.
+ */
 export const languagesDescription: LanguagesRecord = {
   ABAP: '(abap)',
   ActionScript: '(as)',

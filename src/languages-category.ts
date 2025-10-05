@@ -1,5 +1,42 @@
 import { LanguagesRecord } from './languages';
 
+/**
+ * Un mapa que categoriza lenguajes de programación, tecnologías y formatos
+ * según su propósito principal dentro del desarrollo de software.
+ *
+ * Las claves representan nombres de lenguajes o tecnologías, y los valores
+ * indican su categoría funcional, como por ejemplo:
+ * - `'frontend'`: tecnologías orientadas a la interfaz de usuario.
+ * - `'backend'`: lenguajes usados en lógica de servidor o procesamiento.
+ * - `'scripting'`: lenguajes usados para automatización o scripts.
+ * - `'build'`: herramientas de construcción y configuración.
+ * - `'template'`: motores de plantillas para generar contenido dinámico.
+ * - `'data'`: formatos o lenguajes centrados en el manejo de datos.
+ * - `'documentation'`: lenguajes usados para escribir documentación técnica.
+ * - `'academic'`: lenguajes usados en investigación o enseñanza.
+ * - `'embedded'`: lenguajes para sistemas embebidos o hardware.
+ * - `'graphics'`: tecnologías para renderizado o procesamiento visual.
+ * - `'tooling'`: lenguajes o archivos usados por herramientas de desarrollo.
+ * - `'testing'`: tecnologías para pruebas automatizadas.
+ * - `'game'`: lenguajes usados en desarrollo de videojuegos.
+ * - `'network'`: tecnologías relacionadas con redes.
+ * - `'devops'`: herramientas para infraestructura y operaciones.
+ * - `'blockchain'`: lenguajes usados en desarrollo de contratos inteligentes.
+ *
+ * Este objeto es útil para:
+ * - Clasificar lenguajes en visualizaciones o filtros.
+ * - Generar agrupaciones por tipo en interfaces de usuario.
+ * - Analizar el uso de tecnologías por dominio.
+ *
+ * @example
+ * ```ts
+ * const category = languagesCategory['Python']; // 'scripting'
+ * ```
+ *
+ * @remarks
+ * Este objeto implementa la interfaz `LanguagesRecord`, donde cada clave es
+ * un nombre de lenguaje y el valor es una cadena que representa su categoría.
+ */
 export const languagesCategory: LanguagesRecord = {
   ABAP: 'backend',
   ActionScript: 'frontend',
