@@ -12,5 +12,5 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-    - name: 🧨 Executing Script
-      run: curl https://raw.githubusercontent.com/ElJijuna/Bash-Scripts/refs/heads/main/web-audit-report.sh | bash -s ${{ inputs.name }}
+    - name: 🧨 Executing Script...
+      run: curl https://raw.githubusercontent.com/ElJijuna/Bash-Scripts/refs/heads/main/web-audit-report.sh | bash -s npm
