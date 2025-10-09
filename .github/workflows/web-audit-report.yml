@@ -17,3 +17,19 @@ jobs:
       run: npm ci
     - name: 🧨 Executing Script...
       run: curl https://raw.githubusercontent.com/ElJijuna/Bash-Scripts/refs/heads/main/web-audit-report.sh | bash -s npm
+  sends-report:
+    runs-on: ubuntu-latest
+    needs: audit
+    steps:
+    - name: 📥 Cloning
+      run: |
+        git clone https://github.com/ElJijuna/Npm-Audit-Reports.git
+        cd Npm-Audit-Reports
+    - name: 📦 Copiar el archivo generado
+      run: |
+        cp ../cloc_languages.json ./cloc_languages.json
+    - name: ✅ Commit & Push
+      run: |
+        git add cloc_languages.json
+        git commit -m "📊 Nuevo reporte desde workflow"
+        git push
