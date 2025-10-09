@@ -24,8 +24,9 @@ jobs:
     - name: 📥 Cloning
       run: |
         git clone https://github.com/ElJijuna/Npm-Audit-Reports.git
+        ls
         cd Npm-Audit-Reports
-    - name: 📦 Copiar el archivo generado
+    - name: 📦 Copy report
       run: |
         cp ../cloc_languages.json ./cloc_languages.json
     - name: ✅ Commit & Push
