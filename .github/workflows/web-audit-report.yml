@@ -23,8 +23,8 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: audit-report
-        path: cloc-languages.json
-  sends-report:
+        path: cloc-languages--web-audit.json
+  publish-report:
     runs-on: ubuntu-latest
     needs: audit
     steps:
@@ -32,7 +32,7 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git clone --depth 1 https://x-access-token:${{ secrets.NPM_AUDIT_REPORT }}@github.com/ElJijuna/Npm-Audit-Reports.git .
+        git clone --depth 1 https://x-access-token:${{ secrets.MONITORING_TOOL_DB }}@github.com/ElJijuna/MonitoringTool-DB.git .
     - name: 📥 Download artifact
       uses: actions/download-artifact@v4
       with:
@@ -41,6 +41,28 @@ jobs:
       run: ls -l
     - name: ✅ Commit & Push
       run: |
-        git add cloc-languages.json
+        git add cloc-languages--web-audit.json
         git commit -m "📊 Update report"
         git push
+  publish-report-versions:
+    runs-on: ubuntu-latest
+    needs: publish-report
+        steps:
+    - name: 📥 Cloning
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git clone --depth 1 https://x-access-token:${{ secrets.MONITORING_TOOL_DB }}@github.com/ElJijuna/MonitoringTool-DB.git .
+    - name: 📂 Verify repository content
+      run: ls -l
+    - name: 🧨 Executing Script...
+      run: curl https://raw.githubusercontent.com/ElJijuna/Bash-Scripts/refs/heads/main/web-audit-versions.sh | bash -s cloc-languages--web-audit
+    - name: 📂 Verify repository content
+      run: ls -l
+    - name: ✅ Commit & Push
+      run: |
+        git add cloc-languages--web-audit--versions.json
+        git commit -m "📊 Update report versions"
+        git push
+      
+
