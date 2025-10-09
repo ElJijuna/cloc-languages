@@ -35,13 +35,14 @@ jobs:
     - name: 📥 Cloning
       run: |
         git clone --depth 1 https://github.com/ElJijuna/Npm-Audit-Reports.git
-        ls -la ${{ github.workspace }}
+    - name: 📂 Verify repository content
+      run: ls -l
     - name: 📦 Copy report
       run: |
-        cp ${{ github.workspace }}/cloc_languages.json Npm-Audit-Reports/cloc_languages.json
+        cp cloc-languages.json Npm-Audit-Reports/cloc-languages.json
         cd Npm-Audit-Reports
     - name: ✅ Commit & Push
       run: |
-        git add cloc_languages.json
-        git commit -m "📊 Nuevo reporte desde workflow"
+        git add cloc-languages.json
+        git commit -m "📊 Update report"
         git push
