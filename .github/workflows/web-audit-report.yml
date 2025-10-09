@@ -28,21 +28,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: audit
     steps:
-    - name: 📥 Download artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: audit-report
     - name: 📥 Cloning
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git clone --depth 1 https://x-access-token:${{ secrets.NPM_AUDIT_REPORT }}@github.com/ElJijuna/Npm-Audit-Reports.git
-    - name: 📂 Verify repository content
-      run: ls -l
-    - name: 📦 Copy report
-      run: |
-        cp cloc-languages.json Npm-Audit-Reports/cloc-languages.json
-        cd Npm-Audit-Reports
+        git clone --depth 1 https://x-access-token:${{ secrets.NPM_AUDIT_REPORT }}@github.com/ElJijuna/Npm-Audit-Reports.git .
+    - name: 📥 Download artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: audit-report
     - name: 📂 Verify repository content
       run: ls -l
     - name: ✅ Commit & Push
