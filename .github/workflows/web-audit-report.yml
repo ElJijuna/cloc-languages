@@ -23,7 +23,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: audit-report
-        path: cloc_languages.json
+        path: cloc-languages.json
   sends-report:
     runs-on: ubuntu-latest
     needs: audit
