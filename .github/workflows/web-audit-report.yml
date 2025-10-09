@@ -18,7 +18,7 @@ jobs:
     - name: 🧨 Executing Script...
       run: curl https://raw.githubusercontent.com/ElJijuna/Bash-Scripts/refs/heads/main/web-audit-report.sh | bash -s npm
     - name: 📦 Save report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: audit-report
         path: cloc_languages.json
@@ -27,7 +27,7 @@ jobs:
     needs: audit
     steps:
     - name: 📥 Download artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: audit-report
     - name: 📥 Cloning
