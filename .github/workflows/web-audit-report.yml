@@ -24,7 +24,7 @@ jobs:
     - name: 📥 Cloning
       run: |
         git clone --depth 1 https://github.com/ElJijuna/Npm-Audit-Reports.git
-        ls -l cloc_languages.json
+        ls -la ${{ github.workspace }}
     - name: 📦 Copy report
       run: |
         cp ${{ github.workspace }}/cloc_languages.json Npm-Audit-Reports/cloc_languages.json
