@@ -34,13 +34,17 @@ jobs:
         name: audit-report
     - name: 📥 Cloning
       run: |
-        git clone --depth 1 https://github.com/ElJijuna/Npm-Audit-Reports.git
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git clone --depth 1 https://x-access-token:${{ secrets.NPM_AUDIT_REPORT }}@github.com/ElJijuna/Npm-Audit-Reports.git
     - name: 📂 Verify repository content
       run: ls -l
     - name: 📦 Copy report
       run: |
         cp cloc-languages.json Npm-Audit-Reports/cloc-languages.json
         cd Npm-Audit-Reports
+    - name: 📂 Verify repository content
+      run: ls -l
     - name: ✅ Commit & Push
       run: |
         git add cloc-languages.json
