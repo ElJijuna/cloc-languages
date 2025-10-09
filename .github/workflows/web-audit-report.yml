@@ -23,12 +23,12 @@ jobs:
     steps:
     - name: 📥 Cloning
       run: |
-        git clone https://github.com/ElJijuna/Npm-Audit-Reports.git
-        ls
-        cd Npm-Audit-Reports
+        git clone --depth 1 https://github.com/ElJijuna/Npm-Audit-Reports.git
+        ls -l cloc_languages.json
     - name: 📦 Copy report
       run: |
-        cp ../cloc_languages.json ./cloc_languages.json
+        cp ${{ github.workspace }}/cloc_languages.json Npm-Audit-Reports/cloc_languages.json
+        cd Npm-Audit-Reports
     - name: ✅ Commit & Push
       run: |
         git add cloc_languages.json
